@@ -5,7 +5,8 @@ function compoundInterest(principle, time, rateOFInterest, expectedValue)  {
     let rateOFInterestPerYear = (updatedPrincipal * rateOFInterest) / 100;
     updatedPrincipal = (updatedPrincipal + rateOFInterestPerYear);
   }
-  let totalCompoundInterest = updatedPrincipal - principle;
+  
+    let totalCompoundInterest = updatedPrincipal - principle;
   return totalCompoundInterest;
 }
 
