@@ -1,9 +1,9 @@
-function simpleInterest(principle, time, rateOFInterest, expectedValue)  {
-  return (principle * time * rateOFInterest) / 100;
+function simpleInterest(principle, time, rateOfInterest, expectedValue)  {
+  return (principle * time * rateOfInterest) / 100;
 }
 
-function printValue(principle, time, rateOFInterest, expectedValue) {
-  let simpleInterestvalue = simpleInterest(principle, time, rateOFInterest, expectedValue);
+function printValue(principle, time, rateOfInterest, expectedValue) {
+  let simpleInterestvalue = simpleInterest(principle, time, rateOfInterest, expectedValue);
   
   if(simpleInterestvalue === expectedValue) {
     console.log('✅ expected interest is ' + expectedValue + ' and your result is '+  simpleInterestvalue);
