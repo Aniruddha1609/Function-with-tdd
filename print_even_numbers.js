@@ -1,15 +1,15 @@
 function startingNumber(startOfTheRange) {
-  let currentNumber = startOfTheRange
+  let firstValue = startOfTheRange
   
-  if (currentNumber % 2 !== 0) {
-    currentNumber = currentNumber + 1;
+  if (firstValue % 2 !== 0) {
+    firstValue = firstValue + 1;
   }
-  return currentNumber;
+  return firstValue;
 }
 
-function evenNumbers(startOfTheRange, endOfTheRange, expectedValue) {
+function evenNumbers(startOfTheRange, endOfTheRange) {
   let finalString = "";
-  finalString = finalString + startingNumber(startOfTheRange) 
+  finalString = finalString + startingNumber(startOfTheRange); 
   
   for (let currentTerm = startOfTheRange + 2; currentTerm <= endOfTheRange; currentTerm++) {
     
@@ -20,20 +20,18 @@ function evenNumbers(startOfTheRange, endOfTheRange, expectedValue) {
   return finalString;
 }
 
-function getEmoji(startingNumber,endOfTheRange,expectedValue) {
-  let finalString = evenNumbers(startingNumber,endOfTheRange,expectedValue);
-  let symbol = (finalString === expectedValue) ? "✅" : "❌";  
+function composeMessage(startingNumber,endOfTheRange,expectedValue) {
+  const finalString = evenNumbers(startingNumber,endOfTheRange);
+  const symbol = (finalString === expectedValue) ? "✅" : "❌";  
   console.log(symbol + " expected value is " + " is " + expectedValue + " and your value is " + finalString );
 }
 
 function printAll() {
-  getEmoji(1, 6, "2 4 6");
-  getEmoji(6, 12, "6 8 10 12");
-  getEmoji(5, 10, "6 8 10");
-  getEmoji(9, 18, "10 12 14 16 18");
-  
+  composeMessage(1, 6, "2 4 6");
+  composeMessage(6, 12, "6 8 10 12");
+  composeMessage(5, 10, "6 8 10");
+  composeMessage(9, 18, "10 12 14 16 18");
 }
-
 
 printAll();
 
