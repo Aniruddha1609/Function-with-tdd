@@ -1,13 +1,17 @@
 function decimalToBinary(decimalValue) {
+  
   if ( decimalValue === 0) {
   return 0;
   }
+  
   let finalString = "";
+  
   while (decimalValue > 0) {
     let lastBinaryDigit = decimalValue % 2;
     finalString = finalString + lastBinaryDigit;
     decimalValue = (decimalValue - lastBinaryDigit) / 2;
-  }  
+  } 
+  
   return finalString;
 }
 
