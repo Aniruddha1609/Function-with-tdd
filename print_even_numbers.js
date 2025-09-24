@@ -1,5 +1,6 @@
 function startingNumber(startOfTheRange) {
   let currentNumber = startOfTheRange
+  
   if (currentNumber % 2 !== 0) {
     currentNumber = currentNumber + 1;
   }
@@ -22,24 +23,14 @@ function evenNumbers(startOfTheRange, endOfTheRange, expectedValue) {
 function getEmoji(startingNumber,endOfTheRange,expectedValue) {
   let finalString = evenNumbers(startingNumber,endOfTheRange,expectedValue);
   let symbol = (finalString === expectedValue) ? "✅" : "❌";  
-  return symbol;
-}
-
-function printEvenNumbers(startingNumber,endOfTheRange,expectedValue) {
-  const symbol = getEmoji(startingNumber,endOfTheRange,expectedValue)
-  if (symbol === "✅") {
-    console.log("✅");
-  }
-  else {
-    console.log("❌");
-  }
+  console.log(symbol + " expected value is " + " is " + expectedValue + " and your value is " + finalString );
 }
 
 function printAll() {
-  printEvenNumbers(1, 6, "2 4 6");
-  printEvenNumbers(6, 12, "6 8 10 12");
-  printEvenNumbers(5, 10, "6 8 10");
-  printEvenNumbers(9, 18, "10 12 14 16 18");
+  getEmoji(1, 6, "2 4 6");
+  getEmoji(6, 12, "6 8 10 12");
+  getEmoji(5, 10, "6 8 10");
+  getEmoji(9, 18, "10 12 14 16 18");
   
 }
 
